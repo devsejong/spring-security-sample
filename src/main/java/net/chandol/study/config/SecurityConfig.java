@@ -28,10 +28,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 .permitAll()
                 .and()
-            .logout()
-                .logoutUrl("/logout")
-                .permitAll()
-                .and()
             .userDetailsService(userService)
             .csrf()
                 .disable();
